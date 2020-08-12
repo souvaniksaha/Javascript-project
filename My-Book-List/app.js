@@ -47,7 +47,7 @@ class UI{
 
    static removeBookFromItem(book){
       
-    //will the row which contains delete class
+    //will delete the row which contains delete class
        if(book.classList.contains('delete'))
            book.parentElement.parentElement.remove();
         
