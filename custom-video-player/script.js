@@ -13,7 +13,8 @@ function toggleUpdateStatus() {
 
 //stop video
 function stopVideo() {
-  return true;
+  video.currentTime = 0;
+  video.pause();
 }
 
 //update play and pause icon
@@ -24,12 +25,12 @@ function updatePlayIcon() {
 
 //update progess and time
 function updateProgress() {
-  return true;
+  progress.value = (video.currentTime / video.duration) * 100;
 }
 
 //set video time 
 function setVideoProgress() {
-  return true;
+  video.currentTime = (+progress.value * video.duration) / 100;
 }
 
 
